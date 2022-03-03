@@ -1,5 +1,7 @@
 # mic_preamp
 
+![alt text](https://github.com/AranweLTT/mic_preamp/blob/main/easyeda/render/pcb_3d_green.PNG?raw=true)
+
 ## General description
 
 The LE100 preamp is a multistage transistor based microphone amplifier. It is built around the BC848 NPN transistor and is designed to boost a microphone signal to a suitable level for an ADC converter.
