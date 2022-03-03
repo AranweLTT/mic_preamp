@@ -1,0 +1,100 @@
+
+**** 02/18/22 15:31:12 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "cascade-total_freq"  [ G:\workspace\emetteur_commun_5V\projet_emetteur_commun-pspicefiles\cascade\total_freq.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "total_freq.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of Z:\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 1000 1 10Meg
+.OP
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\cascade.net" 
+
+
+
+**** INCLUDING cascade.net ****
+* source PROJET_EMETTEUR_COMMUN
+C_C7         N07364 N07414  470n  TC=0,0 
+R_RE         0 N07364  680 TC=0,0 
+C_C6         VS2 N07266  470n  TC=0,0 
+Q_Q6         VCC N07266 N07364 BC238BP/ZTX 
+R_RB7         0 N07266  330k TC=0,0 
+R_RB6         N07266 VCC  220k TC=0,0 
+R_R8         N07414 VS3  82 TC=0,0 
+R_RB1         N02964 VCC  120k TC=0,0 
+R_RE1         0 N03128  1.2k TC=0,0 
+V_V6         VCC 0 5Vdc
+R_RC         N02968 VCC  2.2k TC=0,0 
+R_RE2         0 N03230  220 TC=0,0 
+C_C2         N02968 VS1  470n  TC=0,0 
+V_V3         N03092 0  AC 1m
++SIN 0 1m 1k 0 0 0
+R_R6         N03092 VE  50 TC=0,0 
+C_C3         N03230 N03128  6.8u  TC=0,0 
+R_RB2         0 N02964  100k TC=0,0 
+C_C1         VE N02964  470n  TC=0,0 
+Q_Q1         N02968 N02964 N03128 BC238BP/ZTX 
+Q_Q5         N06585 N06661 N06753 BC238BP/ZTX 
+R_RE3         N06585 N06415  22 TC=0,0 
+Q_Q3         N06265 N06397 N06421 BC238BP/ZTX 
+R_RE5         N06747 0  2.2k TC=0,0 
+R_RC1         VS2 VCC  1k TC=0,0 
+R_RE4         N06585 N06421  22 TC=0,0 
+R_RE6         0 N06753  220 TC=0,0 
+Q_Q4         N06661 N06661 N06747 BC238BP/ZTX 
+R_RC2         N06265 VCC  1k TC=0,0 
+R_RB5         N06661 VREF  2.2k TC=0,0 
+R_RB3         VREF N06397  10k TC=0,0 
+R_RB4         VREF VS1  10k TC=0,0 
+C_C5         VREF N06397  470n  TC=0,0 
+Q_Q2         VS2 VS1 N06415 BC238BP/ZTX 
+V_V7         VREF 0 2.5V
+R_RE7         N18787 N18647  22 TC=0,0 
+R_RB10         N18839 VREF  2.2k TC=0,0 
+R_RE8         N18787 N18653  22 TC=0,0 
+R_RC3         VS4 VCC  1k TC=0,0 
+Q_Q7         VS4 VS3 N18647 BC238BP/ZTX 
+R_RE10         0 N18923  220 TC=0,0 
+R_RB9         VREF VS3  10k TC=0,0 
+Q_Q10         N18787 N18839 N18923 BC238BP/ZTX 
+C_C8         VREF N18629  470n  TC=0,0 
+R_RC4         N18551 VCC  1k TC=0,0 
+Q_Q9         N18839 N18839 N18917 BC238BP/ZTX 
+R_RE9         N18917 0  2.2k TC=0,0 
+Q_Q8         N18551 N18629 N18653 BC238BP/ZTX 
+R_RB8         VREF N18629  10k TC=0,0 
+C_C9         VS4 N19469  470n  TC=0,0 
+R_RB12         0 N19469  330k TC=0,0 
+Q_Q11         VCC N19469 N19539 BC238BP/ZTX 
+C_C10         N19539 N19591  470n  TC=0,0 
+R_RB11         N19469 VCC  220k TC=0,0 
+R_R9         N19591 VS5  82 TC=0,0 
+R_RE11         0 N19539  680 TC=0,0 
+
+**** RESUMING total_freq.cir ****
+.END
+
+ERROR(ORPSIM-15141): Less than 2 connections at node VS5.
+
+ERROR(ORPSIM-15142): Node N19591 is floating
+
+ERROR(ORPSIM-15142): Node VS5 is floating
+

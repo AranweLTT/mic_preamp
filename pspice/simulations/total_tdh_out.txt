@@ -1,0 +1,243 @@
+
+**** 02/21/22 12:29:10 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "cascade-total_tdh"  [ D:\lorenzo\projet_ampli_microphone-pspicefiles\cascade\total_tdh.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "total_tdh.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of Z:\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 1ms 10n 
+.FOUR 1k 20 V([VS4]) 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\cascade.net" 
+
+
+
+**** INCLUDING cascade.net ****
+* source PROJET_AMPLI_MICROPHONE
+C_C7         N07364 VS4  1u  TC=0,0 
+R_RE         0 N07364  1k TC=0,0 
+C_C6         VS3 N07266  1u  TC=0,0 
+Q_Q6         VCC N07266 N07364 BC238BP/ZTX 
+R_RB7         0 N07266  180k TC=0,0 
+R_RB6         N07266 VCC  100k TC=0,0 
+R_RB1         N02964 VCC  150k TC=0,0 
+R_RE1         0 N03128  1.2k TC=0,0 
+V_V6         VCC 0 5Vdc
+R_RC         N02968 VCC  2.2k TC=0,0 
+R_RE2         0 N03230  220 TC=0,0 
+C_C2         N02968 VS1  1u  TC=0,0 
+V_V3         N03092 0  AC 5m
++SIN 0 5m 1k 0 0 0
+R_R6         N03092 VE  50 TC=0,0 
+C_C3         N03230 N03128  10u  TC=0,0 
+R_RB2         0 N02964  100k TC=0,0 
+C_C1         VE N02964  1u  TC=0,0 
+Q_Q1         N02968 N02964 N03128 BC238BP/ZTX 
+Q_Q5         N06585 N06661 N06753 BC238BP/ZTX 
+R_RE3         N06585 N06415  100 TC=0,0 
+Q_Q3         N06265 N06397 N06421 BC238BP/ZTX 
+R_RE5         N06747 0  2.2k TC=0,0 
+R_RC1         VS2 VCC  1k TC=0,0 
+R_RE4         N06585 N06421  100 TC=0,0 
+R_RE6         0 N06753  220 TC=0,0 
+Q_Q4         N06661 N06661 N06747 BC238BP/ZTX 
+R_RC2         N06265 VCC  1k TC=0,0 
+R_RB5         N06661 VREF  2.2k TC=0,0 
+R_RB3         VREF N06397  10k TC=0,0 
+R_RB4         VREF VS1  10k TC=0,0 
+C_C5         VREF N06397  1u  TC=0,0 
+Q_Q2         VS2 VS1 N06415 BC238BP/ZTX 
+V_V7         VREF 0 2.5V
+R_RE7         N18787 N18647  100 TC=0,0 
+R_RB10         N18839 VREF  2.2k TC=0,0 
+R_RE8         N18787 N18653  100 TC=0,0 
+R_RC3         VS3 VCC  1k TC=0,0 
+Q_Q7         VS3 N18617 N18647 BC238BP/ZTX 
+R_RE10         0 N18923  220 TC=0,0 
+R_RB9         VREF N18617  10k TC=0,0 
+Q_Q10         N18787 N18839 N18923 BC238BP/ZTX 
+C_C8         VREF N18629  1u  TC=0,0 
+R_RC4         N18551 VCC  1k TC=0,0 
+Q_Q9         N18839 N18839 N18917 BC238BP/ZTX 
+R_RE9         N18917 0  2.2k TC=0,0 
+Q_Q8         N18551 N18629 N18653 BC238BP/ZTX 
+R_RB8         VREF N18629  10k TC=0,0 
+R_ZCH         0 VS4  1k TC=0,0 
+C_C9         VS2 N18617  1u  TC=0,0 
+
+**** RESUMING total_tdh.cir ****
+.END
+
+**** 02/21/22 12:29:10 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "cascade-total_tdh"  [ D:\lorenzo\projet_ampli_microphone-pspicefiles\cascade\total_tdh.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BC238BP/ZTX     
+               NPN             
+       LEVEL    1            
+          IS   18.000000E-15 
+          BF  400            
+          NF     .9955       
+         VAF   80            
+         IKF     .14         
+         ISE   50.000000E-15 
+          NE    1.46         
+          BR   35.5          
+          NR    1.005        
+         VAR   12.5          
+         IKR     .03         
+         ISC  172.000000E-15 
+          NC    1.27         
+         ISS    0            
+          RB     .56         
+          RE     .6          
+          RC     .25         
+         CJE   13.000000E-12 
+         VJE     .75         
+         CJC    4.000000E-12 
+         VJC     .54         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  640.000000E-12 
+          TR   50.720000E-09 
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 02/21/22 12:29:10 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "cascade-total_tdh"  [ D:\lorenzo\projet_ampli_microphone-pspicefiles\cascade\total_tdh.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VE)    0.0000  (  VCC)    5.0000  (  VS1)    2.4306  (  VS2)    3.0444      
+
+(  VS3)    3.0444  (  VS4)    0.0000  ( VREF)    2.5000  (N02964)    1.7868     
+
+(N02968)    2.9008 (N03092)    0.0000 (N03128)    1.1493 (N03230)    0.0000     
+
+(N06265)    3.0444 (N06397)    2.4306 (N06415)    1.7736 (N06421)    1.7736     
+
+(N06585)    1.5773 (N06661)    1.5433 (N06747)     .9270 (N06753)     .8665     
+
+(N07266)    2.7501 (N07364)    2.0919 (N18551)    3.0444 (N18617)    2.4306     
+
+(N18629)    2.4306 (N18647)    1.7736 (N18653)    1.7736 (N18787)    1.5773     
+
+(N18839)    1.5433 (N18917)     .9270 (N18923)     .8665 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V6        -1.091E-02
+    V_V3         0.000E+00
+    V_V7        -8.975E-04
+
+    TOTAL POWER DISSIPATION   5.68E-02  WATTS
+
+
+**** 02/21/22 12:29:10 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "cascade-total_tdh"  [ D:\lorenzo\projet_ampli_microphone-pspicefiles\cascade\total_tdh.sim ] 
+
+
+ ****     FOURIER ANALYSIS                 TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+FOURIER COMPONENTS OF TRANSIENT RESPONSE V(VS4)
+
+
+
+ DC COMPONENT =  -5.3786E-04
+
+ HARMONIC   FREQUENCY     FOURIER     NORMALIZED     PHASE     NORMALIZED
+    NO         (HZ)      COMPONENT     COMPONENT     (DEG)     PHASE (DEG)
+
+     1    1.0000E+03   6.4830E-01   1.0000E+00  -1.6557E+02   0.0000E+00
+     2    2.0000E+03   2.5019E-03   3.8592E-03  -6.4590E+01   2.6654E+02
+     3    3.0000E+03   1.6199E-03   2.4987E-03  -1.5406E+02   3.4263E+02
+     4    4.0000E+03   1.7463E-04   2.6936E-04   1.3694E+02   7.9920E+02
+     5    5.0000E+03   6.3290E-05   9.7625E-05   8.1942E+01   9.0977E+02
+     6    6.0000E+03   1.3329E-05   2.0560E-05  -1.4942E+02   8.4398E+02
+     7    7.0000E+03   1.8550E-05   2.8613E-05  -1.1040E+02   1.0486E+03
+     8    8.0000E+03   1.4049E-05   2.1671E-05   1.6425E+02   1.4888E+03
+     9    9.0000E+03   1.6826E-05   2.5955E-05   1.5343E+02   1.6435E+03
+    10    1.0000E+04   1.4489E-05   2.2350E-05  -1.7893E+02   1.4767E+03
+    11    1.1000E+04   9.4433E-06   1.4566E-05  -1.0985E+02   1.7114E+03
+    12    1.2000E+04   7.9938E-06   1.2330E-05   1.5811E+02   2.1449E+03
+    13    1.3000E+04   1.2353E-05   1.9055E-05   1.5397E+02   2.3063E+03
+    14    1.4000E+04   9.6906E-06   1.4948E-05  -1.6052E+02   2.1574E+03
+    15    1.5000E+04   8.8905E-06   1.3714E-05  -7.5073E+01   2.4084E+03
+    16    1.6000E+04   9.3444E-06   1.4414E-05  -1.7113E+02   2.4779E+03
+    17    1.7000E+04   9.5949E-06   1.4800E-05   1.7188E+02   2.9865E+03
+    18    1.8000E+04   5.6510E-06   8.7167E-06  -1.7931E+02   2.8009E+03
+    19    1.9000E+04   2.8817E-06   4.4451E-06  -1.7195E+02   2.9738E+03
+    20    2.0000E+04   9.7405E-06   1.5025E-05   1.7885E+02   3.4902E+03
+
+
+     TOTAL HARMONIC DISTORTION =   4.6070E-01 PERCENT
+
+
+          JOB CONCLUDED
+
+**** 02/21/22 12:29:10 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "cascade-total_tdh"  [ D:\lorenzo\projet_ampli_microphone-pspicefiles\cascade\total_tdh.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =       85.52
+

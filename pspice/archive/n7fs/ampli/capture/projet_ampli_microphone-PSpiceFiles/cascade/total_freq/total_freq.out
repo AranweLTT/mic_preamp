@@ -1,0 +1,349 @@
+
+**** 02/19/22 09:59:24 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "cascade-total_freq"  [ G:\workspace\capture\projet_ampli_microphone-pspicefiles\cascade\total_freq.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "total_freq.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of Z:\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 1000 1 10Meg
+.OP
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\cascade.net" 
+
+
+
+**** INCLUDING cascade.net ****
+* source PROJET_AMPLI_MICROPHONE
+C_C7         N07364 VS3  1u  TC=0,0 
+R_RE         0 N07364  1k TC=0,0 
+C_C6         VS2 N07266  1u  TC=0,0 
+Q_Q6         VCC N07266 N07364 BC238BP/ZTX 
+R_RB7         0 N07266  180k TC=0,0 
+R_RB6         N07266 VCC  100k TC=0,0 
+R_RB1         N02964 VCC  150k TC=0,0 
+R_RE1         0 N03128  1.2k TC=0,0 
+V_V6         VCC 0 5Vdc
+R_RC         N02968 VCC  2.2k TC=0,0 
+R_RE2         0 N03230  220 TC=0,0 
+C_C2         N02968 VS1  1u  TC=0,0 
+V_V3         N03092 0  AC 5m
++SIN 0 5m 5k 0 0 0
+R_R6         N03092 VE  50 TC=0,0 
+C_C3         N03230 N03128  10u  TC=0,0 
+R_RB2         0 N02964  100k TC=0,0 
+C_C1         VE N02964  1u  TC=0,0 
+Q_Q1         N02968 N02964 N03128 BC238BP/ZTX 
+Q_Q5         N06585 N06661 N06753 BC238BP/ZTX 
+R_RE3         N06585 N06415  100 TC=0,0 
+Q_Q3         N06265 N06397 N06421 BC238BP/ZTX 
+R_RE5         N06747 0  2.2k TC=0,0 
+R_RC1         VS2 VCC  1k TC=0,0 
+R_RE4         N06585 N06421  100 TC=0,0 
+R_RE6         0 N06753  220 TC=0,0 
+Q_Q4         N06661 N06661 N06747 BC238BP/ZTX 
+R_RC2         N06265 VCC  1k TC=0,0 
+R_RB5         N06661 VREF  2.2k TC=0,0 
+R_RB3         VREF N06397  10k TC=0,0 
+R_RB4         VREF VS1  10k TC=0,0 
+C_C5         VREF N06397  1u  TC=0,0 
+Q_Q2         VS2 VS1 N06415 BC238BP/ZTX 
+V_V7         VREF 0 2.5V
+R_RE7         N18787 N18647  100 TC=0,0 
+R_RB10         N18839 VREF  2.2k TC=0,0 
+R_RE8         N18787 N18653  100 TC=0,0 
+R_RC3         VS4 VCC  1k TC=0,0 
+Q_Q7         VS4 VS3 N18647 BC238BP/ZTX 
+R_RE10         0 N18923  220 TC=0,0 
+R_RB9         VREF VS3  10k TC=0,0 
+Q_Q10         N18787 N18839 N18923 BC238BP/ZTX 
+C_C8         VREF N18629  1u  TC=0,0 
+R_RC4         N18551 VCC  1k TC=0,0 
+Q_Q9         N18839 N18839 N18917 BC238BP/ZTX 
+R_RE9         N18917 0  2.2k TC=0,0 
+Q_Q8         N18551 N18629 N18653 BC238BP/ZTX 
+R_RB8         VREF N18629  10k TC=0,0 
+C_C9         VS4 N19469  1u  TC=0,0 
+R_RB12         0 N19469  180k TC=0,0 
+Q_Q11         VCC N19469 N19539 BC238BP/ZTX 
+C_C10         N19539 VS5  1u  TC=0,0 
+R_RB11         N19469 VCC  100k TC=0,0 
+R_RE11         0 N19539  1k TC=0,0 
+R_ZCH         0 VS5  1k TC=0,0 
+
+**** RESUMING total_freq.cir ****
+.END
+
+**** 02/19/22 09:59:24 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "cascade-total_freq"  [ G:\workspace\capture\projet_ampli_microphone-pspicefiles\cascade\total_freq.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BC238BP/ZTX     
+               NPN             
+       LEVEL    1            
+          IS   18.000000E-15 
+          BF  400            
+          NF     .9955       
+         VAF   80            
+         IKF     .14         
+         ISE   50.000000E-15 
+          NE    1.46         
+          BR   35.5          
+          NR    1.005        
+         VAR   12.5          
+         IKR     .03         
+         ISC  172.000000E-15 
+          NC    1.27         
+         ISS    0            
+          RB     .56         
+          RE     .6          
+          RC     .25         
+         CJE   13.000000E-12 
+         VJE     .75         
+         CJC    4.000000E-12 
+         VJC     .54         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  640.000000E-12 
+          TR   50.720000E-09 
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 02/19/22 09:59:24 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "cascade-total_freq"  [ G:\workspace\capture\projet_ampli_microphone-pspicefiles\cascade\total_freq.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VE)    0.0000  (  VCC)    5.0000  (  VS1)    2.4306  (  VS2)    3.0444      
+
+(  VS3)    2.4306  (  VS4)    3.0444  (  VS5)    0.0000  ( VREF)    2.5000      
+
+(N02964)    1.7868 (N02968)    2.9008 (N03092)    0.0000 (N03128)    1.1493     
+
+(N03230)    0.0000 (N06265)    3.0444 (N06397)    2.4306 (N06415)    1.7736     
+
+(N06421)    1.7736 (N06585)    1.5773 (N06661)    1.5433 (N06747)     .9270     
+
+(N06753)     .8665 (N07266)    2.7501 (N07364)    2.0919 (N18551)    3.0444     
+
+(N18629)    2.4306 (N18647)    1.7736 (N18653)    1.7736 (N18787)    1.5773     
+
+(N18839)    1.5433 (N18917)     .9270 (N18923)     .8665 (N19469)    2.7501     
+
+(N19539)    2.0919 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V6        -1.301E-02
+    V_V3         0.000E+00
+    V_V7        -8.975E-04
+
+    TOTAL POWER DISSIPATION   6.73E-02  WATTS
+
+
+**** 02/19/22 09:59:24 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "cascade-total_freq"  [ G:\workspace\capture\projet_ampli_microphone-pspicefiles\cascade\total_freq.sim ] 
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         Q_Q6                    Q_Q1                  
+MODEL        BC238BP/ZTX             BC238BP/ZTX           
+IB           7.22E-06                3.55E-06             
+IC           2.08E-03                9.54E-04             
+VBE          6.58E-01                6.38E-01             
+VBC         -2.25E+00               -1.11E+00             
+VCE          2.91E+00                1.75E+00             
+BETADC       2.89E+02                2.69E+02             
+GM           7.96E-02                3.67E-02             
+RPI          3.87E+03                8.01E+03             
+RX           5.60E-01                5.60E-01             
+RO           3.74E+04                8.07E+04             
+CBE          7.13E-11                4.36E-11             
+CBC          2.33E-12                2.76E-12             
+CJS          0.00E+00                0.00E+00             
+BETAAC       3.08E+02                2.94E+02             
+CBX/CBX2     0.00E+00                0.00E+00             
+FT/FT2       1.72E+08                1.26E+08             
+
+
+
+NAME         Q_Q5                    Q_Q3                  
+MODEL        BC238BP/ZTX             BC238BP/ZTX           
+IB           1.35E-05                6.94E-06             
+IC           3.93E-03                1.96E-03             
+VBE          6.77E-01                6.57E-01             
+VBC         -3.41E-02               -6.14E-01             
+VCE          7.11E-01                1.27E+00             
+BETADC       2.90E+02                2.82E+02             
+GM           1.48E-01                7.47E-02             
+RPI          2.04E+03                4.03E+03             
+RX           5.60E-01                5.60E-01             
+RO           1.93E+04                3.91E+04             
+CBE          1.15E-10                6.82E-11             
+CBC          3.92E-12                3.11E-12             
+CJS          0.00E+00                0.00E+00             
+BETAAC       3.02E+02                3.01E+02             
+CBX/CBX2     0.00E+00                0.00E+00             
+FT/FT2       1.97E+08                1.67E+08             
+
+
+
+NAME         Q_Q4                    Q_Q2                  
+MODEL        BC238BP/ZTX             BC238BP/ZTX           
+IB           1.72E-06                6.94E-06             
+IC           4.20E-04                1.96E-03             
+VBE          6.16E-01                6.57E-01             
+VBC          0.00E+00               -6.14E-01             
+VCE          6.16E-01                1.27E+00             
+BETADC       2.45E+02                2.82E+02             
+GM           1.62E-02                7.47E-02             
+RPI          1.69E+04                4.03E+03             
+RX           5.60E-01                5.60E-01             
+RO           1.81E+05                3.91E+04             
+CBE          3.02E-11                6.82E-11             
+CBC          4.00E-12                3.11E-12             
+CJS          0.00E+00                0.00E+00             
+BETAAC       2.74E+02                3.01E+02             
+CBX/CBX2     0.00E+00                0.00E+00             
+FT/FT2       7.55E+07                1.67E+08             
+
+
+
+NAME         Q_Q7                    Q_Q10                 
+MODEL        BC238BP/ZTX             BC238BP/ZTX           
+IB           6.94E-06                1.35E-05             
+IC           1.96E-03                3.93E-03             
+VBE          6.57E-01                6.77E-01             
+VBC         -6.14E-01               -3.41E-02             
+VCE          1.27E+00                7.11E-01             
+BETADC       2.82E+02                2.90E+02             
+GM           7.47E-02                1.48E-01             
+RPI          4.03E+03                2.04E+03             
+RX           5.60E-01                5.60E-01             
+RO           3.91E+04                1.93E+04             
+CBE          6.82E-11                1.15E-10             
+CBC          3.11E-12                3.92E-12             
+CJS          0.00E+00                0.00E+00             
+BETAAC       3.01E+02                3.02E+02             
+CBX/CBX2     0.00E+00                0.00E+00             
+FT/FT2       1.67E+08                1.97E+08             
+
+
+
+NAME         Q_Q9                    Q_Q8                  
+MODEL        BC238BP/ZTX             BC238BP/ZTX           
+IB           1.72E-06                6.94E-06             
+IC           4.20E-04                1.96E-03             
+VBE          6.16E-01                6.57E-01             
+VBC          0.00E+00               -6.14E-01             
+VCE          6.16E-01                1.27E+00             
+BETADC       2.45E+02                2.82E+02             
+GM           1.62E-02                7.47E-02             
+RPI          1.69E+04                4.03E+03             
+RX           5.60E-01                5.60E-01             
+RO           1.81E+05                3.91E+04             
+CBE          3.02E-11                6.82E-11             
+CBC          4.00E-12                3.11E-12             
+CJS          0.00E+00                0.00E+00             
+BETAAC       2.74E+02                3.01E+02             
+CBX/CBX2     0.00E+00                0.00E+00             
+FT/FT2       7.55E+07                1.67E+08             
+
+
+
+NAME         Q_Q11                 
+MODEL        BC238BP/ZTX           
+IB           7.22E-06             
+IC           2.08E-03             
+VBE          6.58E-01             
+VBC         -2.25E+00             
+VCE          2.91E+00             
+BETADC       2.89E+02             
+GM           7.96E-02             
+RPI          3.87E+03             
+RX           5.60E-01             
+RO           3.74E+04             
+CBE          7.13E-11             
+CBC          2.33E-12             
+CJS          0.00E+00             
+BETAAC       3.08E+02             
+CBX/CBX2     0.00E+00             
+FT/FT2       1.72E+08             
+
+
+
+          JOB CONCLUDED
+
+**** 02/19/22 09:59:24 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "cascade-total_freq"  [ G:\workspace\capture\projet_ampli_microphone-pspicefiles\cascade\total_freq.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =        3.41
+  Total job time (using Solver 1)   =         .49
+

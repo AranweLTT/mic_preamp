@@ -1,0 +1,13 @@
+* source PROJET_EMETTEUR_COMMUN
+C_C1         VE N01523  1u  TC=0,0 
+Q_Q1         VCC N01523 N01691 BC238BP/ZTX 
+R_ZC         0 VS  4.7k TC=0,0 
+R_RB1         N01523 VCC  68k TC=0,0 
+R_RB2         0 N01523  150k TC=0,0 
+R_RE         0 N01691  1k TC=0,0 
+C_C2         N01691 N04480  1u  TC=0,0 
+V_V3         EG 0  AC 3
++SIN 0 3 1k 0 0 0
+V_V1         VCC 0 5Vdc
+R_R6         EG VE  50 TC=0,0 
+R_R7         N04480 VS  82 TC=0,0 

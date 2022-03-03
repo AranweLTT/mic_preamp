@@ -1,0 +1,253 @@
+
+**** 02/18/22 15:51:11 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "cascade-total_tdh"  [ G:\workspace\emetteur_commun_5V\projet_emetteur_commun-pspicefiles\cascade\total_tdh.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "total_tdh.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of Z:\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 1ms 100n 
+.FOUR 1k 20 V([VS5]) 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\cascade.net" 
+
+
+
+**** INCLUDING cascade.net ****
+* source PROJET_EMETTEUR_COMMUN
+C_C7         N07364 N07414  1u  TC=0,0 
+R_RE         0 N07364  680 TC=0,0 
+C_C6         VS2 N07266  1u  TC=0,0 
+Q_Q6         VCC N07266 N07364 BC238BP/ZTX 
+R_RB7         0 N07266  330k TC=0,0 
+R_RB6         N07266 VCC  220k TC=0,0 
+R_R8         N07414 VS3  82 TC=0,0 
+R_RB1         N02964 VCC  120k TC=0,0 
+R_RE1         0 N03128  1.2k TC=0,0 
+V_V6         VCC 0 5Vdc
+R_RC         N02968 VCC  2.2k TC=0,0 
+R_RE2         0 N03230  220 TC=0,0 
+C_C2         N02968 VS1  1u  TC=0,0 
+V_V3         N03092 0  AC 1m
++SIN 0 1m 1k 0 0 0
+R_R6         N03092 VE  50 TC=0,0 
+C_C3         N03230 N03128  6.8u  TC=0,0 
+R_RB2         0 N02964  100k TC=0,0 
+C_C1         VE N02964  1u  TC=0,0 
+Q_Q1         N02968 N02964 N03128 BC238BP/ZTX 
+Q_Q5         N06585 N06661 N06753 BC238BP/ZTX 
+R_RE3         N06585 N06415  100 TC=0,0 
+Q_Q3         N06265 N06397 N06421 BC238BP/ZTX 
+R_RE5         N06747 0  2.2k TC=0,0 
+R_RC1         VS2 VCC  1k TC=0,0 
+R_RE4         N06585 N06421  100 TC=0,0 
+R_RE6         0 N06753  220 TC=0,0 
+Q_Q4         N06661 N06661 N06747 BC238BP/ZTX 
+R_RC2         N06265 VCC  1k TC=0,0 
+R_RB5         N06661 VREF  2.2k TC=0,0 
+R_RB3         VREF N06397  10k TC=0,0 
+R_RB4         VREF VS1  10k TC=0,0 
+C_C5         VREF N06397  470n  TC=0,0 
+Q_Q2         VS2 VS1 N06415 BC238BP/ZTX 
+V_V7         VREF 0 2.5V
+R_RE7         N18787 N18647  100 TC=0,0 
+R_RB10         N18839 VREF  2.2k TC=0,0 
+R_RE8         N18787 N18653  100 TC=0,0 
+R_RC3         VS4 VCC  1k TC=0,0 
+Q_Q7         VS4 VS3 N18647 BC238BP/ZTX 
+R_RE10         0 N18923  220 TC=0,0 
+R_RB9         VREF VS3  10k TC=0,0 
+Q_Q10         N18787 N18839 N18923 BC238BP/ZTX 
+C_C8         VREF N18629  470n  TC=0,0 
+R_RC4         N18551 VCC  1k TC=0,0 
+Q_Q9         N18839 N18839 N18917 BC238BP/ZTX 
+R_RE9         N18917 0  2.2k TC=0,0 
+Q_Q8         N18551 N18629 N18653 BC238BP/ZTX 
+R_RB8         VREF N18629  10k TC=0,0 
+C_C9         VS4 N19469  470n  TC=0,0 
+R_RB12         0 N19469  330k TC=0,0 
+Q_Q11         VCC N19469 N19539 BC238BP/ZTX 
+C_C10         N19539 N19591  470n  TC=0,0 
+R_RB11         N19469 VCC  220k TC=0,0 
+R_R9         N19591 VS5  82 TC=0,0 
+R_RE11         0 N19539  680 TC=0,0 
+R_ZCH         0 VS5  1k TC=0,0 
+
+**** RESUMING total_tdh.cir ****
+.END
+
+**** 02/18/22 15:51:11 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "cascade-total_tdh"  [ G:\workspace\emetteur_commun_5V\projet_emetteur_commun-pspicefiles\cascade\total_tdh.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BC238BP/ZTX     
+               NPN             
+       LEVEL    1            
+          IS   18.000000E-15 
+          BF  400            
+          NF     .9955       
+         VAF   80            
+         IKF     .14         
+         ISE   50.000000E-15 
+          NE    1.46         
+          BR   35.5          
+          NR    1.005        
+         VAR   12.5          
+         IKR     .03         
+         ISC  172.000000E-15 
+          NC    1.27         
+         ISS    0            
+          RB     .56         
+          RE     .6          
+          RC     .25         
+         CJE   13.000000E-12 
+         VJE     .75         
+         CJC    4.000000E-12 
+         VJC     .54         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  640.000000E-12 
+          TR   50.720000E-09 
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 02/18/22 15:51:11 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "cascade-total_tdh"  [ G:\workspace\emetteur_commun_5V\projet_emetteur_commun-pspicefiles\cascade\total_tdh.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VE)    0.0000  (  VCC)    5.0000  (  VS1)    2.4306  (  VS2)    3.0444      
+
+(  VS3)    2.4306  (  VS4)    3.0444  (  VS5)    0.0000  ( VREF)    2.5000      
+
+(N02964)    2.0391 (N02968)    2.4498 (N03092)    0.0000 (N03128)    1.3962     
+
+(N03230)    0.0000 (N06265)    3.0444 (N06397)    2.4306 (N06415)    1.7736     
+
+(N06421)    1.7736 (N06585)    1.5773 (N06661)    1.5433 (N06747)     .9270     
+
+(N06753)     .8665 (N07266)    2.0644 (N07364)    1.4067 (N07414)    2.4306     
+
+(N18551)    3.0444 (N18629)    2.4306 (N18647)    1.7736 (N18653)    1.7736     
+
+(N18787)    1.5773 (N18839)    1.5433 (N18917)     .9270 (N18923)     .8665     
+
+(N19469)    2.0644 (N19539)    1.4067 (N19591)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V6        -1.316E-02
+    V_V3         0.000E+00
+    V_V7        -8.975E-04
+
+    TOTAL POWER DISSIPATION   6.80E-02  WATTS
+
+
+**** 02/18/22 15:51:11 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "cascade-total_tdh"  [ G:\workspace\emetteur_commun_5V\projet_emetteur_commun-pspicefiles\cascade\total_tdh.sim ] 
+
+
+ ****     FOURIER ANALYSIS                 TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+FOURIER COMPONENTS OF TRANSIENT RESPONSE V(VS5)
+
+
+
+ DC COMPONENT =  -1.8681E-05
+
+ HARMONIC   FREQUENCY     FOURIER     NORMALIZED     PHASE     NORMALIZED
+    NO         (HZ)      COMPONENT     COMPONENT     (DEG)     PHASE (DEG)
+
+     1    1.0000E+03   1.2716E-01   1.0000E+00  -1.5522E+02   0.0000E+00
+     2    2.0000E+03   1.1560E-04   9.0911E-04  -4.0792E+01   2.6965E+02
+     3    3.0000E+03   3.5879E-05   2.8216E-04  -6.6787E+01   3.9887E+02
+     4    4.0000E+03   4.8887E-06   3.8447E-05  -1.0199E+02   5.1889E+02
+     5    5.0000E+03   4.0656E-05   3.1973E-04   1.4244E+02   9.1855E+02
+     6    6.0000E+03   5.3472E-06   4.2052E-05   6.5959E+01   9.9728E+02
+     7    7.0000E+03   4.0377E-05   3.1754E-04  -2.3502E+00   1.0842E+03
+     8    8.0000E+03   1.6112E-05   1.2671E-04  -1.1753E+02   1.1242E+03
+     9    9.0000E+03   4.5547E-05   3.5820E-04  -1.7542E+02   1.2216E+03
+    10    1.0000E+04   1.2823E-05   1.0084E-04   1.3016E+02   1.6824E+03
+    11    1.1000E+04   4.9574E-05   3.8987E-04   2.1065E+01   1.7285E+03
+    12    1.2000E+04   1.3304E-05   1.0462E-04   4.3129E+01   1.9058E+03
+    13    1.3000E+04   3.3458E-05   2.6313E-04  -1.5035E+02   1.8675E+03
+    14    1.4000E+04   3.5461E-06   2.7887E-05  -5.4951E+01   2.1181E+03
+    15    1.5000E+04   2.8524E-05   2.2432E-04   2.9545E+01   2.3579E+03
+    16    1.6000E+04   1.0428E-05   8.2008E-05  -1.2021E+02   2.3633E+03
+    17    1.7000E+04   1.4840E-05   1.1670E-04  -1.6313E+02   2.4756E+03
+    18    1.8000E+04   3.5325E-05   2.7781E-04   1.0099E+01   2.8041E+03
+    19    1.9000E+04   1.9398E-05   1.5255E-04   3.0071E+01   2.9793E+03
+    20    2.0000E+04   3.5588E-05   2.7988E-04  -1.6039E+02   2.9440E+03
+
+
+     TOTAL HARMONIC DISTORTION =   1.3226E-01 PERCENT
+
+
+          JOB CONCLUDED
+
+**** 02/18/22 15:51:11 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "cascade-total_tdh"  [ G:\workspace\emetteur_commun_5V\projet_emetteur_commun-pspicefiles\cascade\total_tdh.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =       44.86
+  Total job time (using Solver 1)   =       10.17
+
