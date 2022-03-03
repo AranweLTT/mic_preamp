@@ -11,18 +11,18 @@ The main advantages over a fully integrated solution like an IC are the customiz
 
 ## Features
 
-< 0.5% harmonic distortion
-182Hz - 2.9MHz frequency range, with optional low pass filter
-43dB gain
-micro-usb 5.0V power input
-3.5mm jack input/output
-Compatible with condenser & dynamic microphones
+- < 0.5% harmonic distortion
+- 182Hz - 2.9MHz frequency range, with optional low pass filter
+- 43dB gain
+- micro-usb 5.0V power input
+- 3.5mm jack input/output
+- Compatible with condenser & dynamic microphones
 
 
 ## Applications
 
-Electret condenser microphones
-Dynamic microphones
-Ultrasonic receivers
-General purpose amplifier
+- Electret condenser microphones
+- Dynamic microphones
+- Ultrasonic receivers
+- General purpose amplifier
 
